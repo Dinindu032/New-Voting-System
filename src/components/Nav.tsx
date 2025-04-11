@@ -24,7 +24,12 @@ export const Nav = () => {
                 Create Voting
               </div>
             </Link>
-            <Link to="/create-voting">
+            <Link to="/create-petition">
+              <div className="text-sm font-semibold text-blue-500 hover:underline">
+                Create Petition
+              </div>
+            </Link>
+            <Link to="/View-Votings">
               <div className="text-sm font-semibold text-blue-500 hover:underline">
                 View Votings
               </div>

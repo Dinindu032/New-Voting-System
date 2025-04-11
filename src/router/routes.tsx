@@ -1,4 +1,4 @@
-import { CreateVoting, Home, ViewVotings } from '../pages'
+import { CreateVoting, Home, ViewVotings, CreatePetition, PetitionPage } from '../pages'
 import { Login } from '../pages/Login'
 
 export const routes = [
@@ -13,7 +13,7 @@ export const routes = [
     name: 'CreateVoting',
   },
   {
-    path: '/view-votings',
+    path: '/View-Votings',
     Component: ViewVotings,
     name: 'ViewVotings',
   },
@@ -21,5 +21,15 @@ export const routes = [
     path: '/login',
     Component: Login,
     name: 'Login',
+  },
+  {
+    path: '/Create-Petition',
+    Component: CreatePetition,
+    name: 'CreatePetition',
+  },
+  {
+    path: '/petition/:id', // dynamic ID
+    Component: PetitionPage,
+    name: 'PetitionPage',
   },
 ]

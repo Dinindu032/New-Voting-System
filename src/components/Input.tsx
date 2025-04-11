@@ -8,6 +8,8 @@ export interface InputProps {
   value?: string
   type?: 'text' | 'password' | 'email'
   name?: string
+  className?: string
+  setTitle?: string
 }
 
 export const Input = ({
