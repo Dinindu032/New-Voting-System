@@ -1,5 +1,6 @@
 import { CreateVoting, Home, ViewVotings, CreatePetition, PetitionPage } from '../pages'
 import { Login } from '../pages/Login'
+import VoteNow from '../pages/VoteNow'
 
 export const routes = [
   {
@@ -31,5 +32,10 @@ export const routes = [
     path: '/petition/:id', // dynamic ID
     Component: PetitionPage,
     name: 'PetitionPage',
+  },
+  {
+    path: 'Vote-Now', // dynamic ID
+    Component: VoteNow,
+    name: 'VoteNow',
   },
 ]
