@@ -47,6 +47,7 @@ import { auth } from '../config'
 
 // ✅ Updated AuthContext interface
 interface AuthContext {
+  user: any
   currentUser: {
     email: string
     [key: string]: any // Add other properties as needed
@@ -55,7 +56,8 @@ interface AuthContext {
 
 // ✅ Create context with default value
 export const AuthContext = createContext<AuthContext>({
-  currentUser: null,
+  user: undefined, // Default value for user
+  currentUser: null, // Default value for currentUser
 })
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
@@ -83,7 +85,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ currentUser }}>
+    <AuthContext.Provider value={{ user: undefined, currentUser }}>
       {children}
     </AuthContext.Provider>
   )

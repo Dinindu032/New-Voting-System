@@ -11,7 +11,10 @@ export const Login = () => {
   const alert = useAlertContext()
 
   const navigate = useNavigate()
-  const { user } = useAuth()
+  // const { user } = useAuth()
+const authContext = useAuth();
+const user = authContext?.user;
+
 
   const [inputs, setInputs] = useState({
     email: '',
