@@ -1,6 +1,8 @@
-import { CreateVoting, Home, ViewVotings, CreatePetition, PetitionPage } from '../pages'
+import { Home, ViewVotings, CreatePetition, PetitionPage } from '../pages'
+import CreateVoting from '../pages/CreateVoting'
 import { Login } from '../pages/Login'
-import VoteNow from '../pages/VoteNow'
+import { VoteNow } from '../pages/VoteNow'
+import CastVoting from '../pages/CastVoting'
 
 export const routes = [
   {
@@ -29,13 +31,23 @@ export const routes = [
     name: 'CreatePetition',
   },
   {
-    path: '/petition/:id', // dynamic ID
+    path: '/petitions/:id', // dynamic ID
     Component: PetitionPage,
     name: 'PetitionPage',
   },
   {
-    path: 'Vote-Now', // dynamic ID
+    path: '/Vote-Now', // dynamic ID
     Component: VoteNow,
     name: 'VoteNow',
+  },
+  {
+    path: '/CastVoting/:uniqueId', // dynamic ID
+    Component: CastVoting,
+    name: 'CastVoting',
+  },
+  {
+    path: '/Cast-Voting/:uniqueId', // dynamic ID
+    Component: CastVoting,
+    name: 'CastVoting',
   },
 ]

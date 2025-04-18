@@ -6,7 +6,7 @@ import { auth } from '../config'
 import { useAuth } from '../providers'
 
 export const Nav = () => {
-  const { user } = useAuth()
+  const { currentUser } = useAuth()
 
   return (
     <div className="content flex h-20 w-full items-center border-b border-neutral-300 bg-white px-8">
@@ -16,7 +16,7 @@ export const Nav = () => {
           <div>Right</div>
         </div>
       </Link>
-      {user && (
+      {currentUser && (
         <>
           <div className="mr-8 flex items-center gap-8">
             <Link to="/create-voting">
@@ -42,7 +42,7 @@ export const Nav = () => {
           </div>
         </>
       )}
-      {user ? (
+      {currentUser ? (
         <div
           className="flex cursor-pointer items-center gap-2 rounded-full border border-blue-500 p-2 text-sm text-blue-500"
           onClick={async () => {

@@ -3,6 +3,5 @@ export * from './Home'
 export * from './Login'
 export * from './ViewVotings'
 export * from './CreatePetition'
-export * from './PetitionPage'
 export * from './VoteNow'
-
+export * from './PetitionPage'

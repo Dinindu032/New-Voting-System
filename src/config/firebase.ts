@@ -20,4 +20,4 @@ const auth = getAuth(app)
 const storage = getStorage(app)
 const analytics = getAnalytics(app)
 
-export { analytics, auth, db, storage }
+export { analytics, auth, db, storage, app }
